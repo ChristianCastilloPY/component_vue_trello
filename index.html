@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Components_erik</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="app">
+        <div class=" container mt-5">
+            <div class="col-md-4 mt-3" v-for="(list, index) in lists" :key="index">     
+                    <simple-card :index="index"></simple-card>
+            </div>
+            
+                                    <!-- BOTON AGREGAR LISTA -->
+            <div class="row">
+                <div class="col-md-5 mt-3">
+                    <button class="btn rounded-0 btn-outline-dark btn-block" 
+                    @click="addList">
+                        Agregar lista
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
